@@ -1,7 +1,7 @@
 # Student Management System
 
 A **Spring Boot REST API project** for managing student records using **Spring Boot, Spring Data JPA, Hibernate, and MySQL**.  
-This project follows a **layered architecture (Controller, Service, Repository, Entity)** and supports full CRUD operations.
+This project implements a **layered architecture (Controller, Service, Repository, Entity)** and supports full CRUD operations.
 
 ---
 
@@ -14,7 +14,7 @@ This project follows a **layered architecture (Controller, Service, Repository, 
 - Delete student record
 - RESTful API design
 - MySQL database integration
-- Layered architecture (Controller-Service-Repository)
+- Clean layered architecture
 
 ---
 
@@ -32,28 +32,29 @@ This project follows a **layered architecture (Controller, Service, Repository, 
 ## 📁 Project Structure
 
 ```
-src/main/java/com/sms/student_management_system
+STUDENT-MANAGEMENT-SYSTEM
 │
-├── controller
-│   └── StudentController.java
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com/sms/student_management_system
+│   │   │       ├── controller
+│   │   │       ├── entity
+│   │   │       ├── repository
+│   │   │       ├── service
+│   │   │       └── StudentManagementSystemApplication.java
+│   │   │
+│   │   └── resources
+│   │       └── application.properties
 │
-├── service
-│   └── StudentService.java
-│
-├── repository
-│   └── StudentRepository.java
-│
-├── entity
-│   └── Student.java
-│
-└── StudentManagementSystemApplication.java
+└── pom.xml
 ```
 
 ---
 
 ## ⚙️ Database Configuration
 
-Update `application.properties` file:
+Update `application.properties`:
 
 ```properties
 spring.application.name=student-management-system
@@ -159,7 +160,7 @@ StudentManagementSystemApplication.java
 - Global exception handling using `@ControllerAdvice`
 - Input validation using Hibernate Validator
 - Swagger API documentation
-- Spring Security authentication (JWT)
+- Spring Security (JWT Authentication)
 - Pagination and sorting
 - Unit testing with JUnit & Mockito
 
