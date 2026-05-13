@@ -1,9 +1,9 @@
-
 package com.sms.student_management_system.entity;
 
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "students")
 public class Student {
 
     @Id
